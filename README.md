@@ -14,6 +14,17 @@ Sem engine, sem sprites, sem dependências: só o seu terminal.
 ![Plataformas](https://img.shields.io/badge/plataformas-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey)
 ![Interface](https://img.shields.io/badge/interface-curses-orange)
 
+<p align="center">
+  <img src="screenshots/gradius_gp.png" alt="MP Gradius Term em jogo">
+</p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="screenshots/lunar_gp.png" alt="MP Lunar Lander em jogo"></td>
+    <td width="50%"><img src="screenshots/misselcomando_gp.png" alt="MP Míssil Comando em jogo"></td>
+  </tr>
+</table>
+
 ---
 
 ## 🎮 Os jogos
@@ -43,6 +54,17 @@ python3 terminal-misslecomando/missel_comando.py     # Míssil Comando
 ---
 
 ## 🚀 MP Gradius Term
+
+<table>
+  <tr>
+    <td><img src="screenshots/gradius_menu.png" alt="MP Gradius Term: menu"></td>
+    <td><img src="screenshots/gradius_gp.png" alt="MP Gradius Term: gameplay"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Menu</sub></td>
+    <td align="center"><sub>Gameplay</sub></td>
+  </tr>
+</table>
 
 *Shoot 'em up* horizontal com rolagem lateral, barra de power-ups no estilo Konami, ondas de inimigos e um chefe no fim da fase.
 
@@ -79,6 +101,17 @@ python3 terminal-misslecomando/missel_comando.py     # Míssil Comando
 
 ## 🌙 MP Lunar Lander
 
+<table>
+  <tr>
+    <td><img src="screenshots/lunar_menu.png" alt="MP Lunar Lander: menu"></td>
+    <td><img src="screenshots/lunar_gp.png" alt="MP Lunar Lander: gameplay"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Menu</sub></td>
+    <td align="center"><sub>Gameplay</sub></td>
+  </tr>
+</table>
+
 Simulador de pouso lunar com física em tempo real: gravidade, inércia, vento, inclinação e combustível limitado. Pouse suavemente numa plataforma. As menores valem mais pontos (×2, ×3, ×5).
 
 **Destaques**
@@ -101,6 +134,17 @@ Simulador de pouso lunar com física em tempo real: gravidade, inércia, vento, 
 ---
 
 ## 💥 MP Míssil Comando
+
+<table>
+  <tr>
+    <td><img src="screenshots/misselcomando_menu.png" alt="MP Míssil Comando: menu"></td>
+    <td><img src="screenshots/misselcomando_gp.png" alt="MP Míssil Comando: gameplay"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Menu</sub></td>
+    <td align="center"><sub>Gameplay</sub></td>
+  </tr>
+</table>
 
 Defenda suas cidades de uma chuva de mísseis inimigos usando três baterias antiaéreas. Mire e dispare para criar explosões que interceptam os ataques antes que cheguem ao chão.
 
@@ -135,6 +179,7 @@ jogos-terminal/
 │   └── lunar_lander.py
 ├── terminal-misslecomando/
 │   └── missel_comando.py
+├── screenshots/
 ├── INSTALACAO.md
 └── README.md
 ```
