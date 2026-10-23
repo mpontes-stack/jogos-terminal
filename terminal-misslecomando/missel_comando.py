@@ -16,7 +16,7 @@
 
  EXECUÇÃO
  --------
-   python3 mp_missel_comando.py
+   python3 missel_comando.py
 
  CONTROLES
  ---------
