@@ -5,6 +5,8 @@ MP-GRADIUS-TERM
 ===============
 Shoot'em up horizontal estilo Gradius (Konami) rodando inteiramente no terminal.
 Usa apenas Python 3 + biblioteca padrao (curses).
+Bilingue: PORTUGUES (PT-BR) / ENGLISH (EN-US), escolhido na tela inicial
+(tecla T alterna a qualquer momento).
 
 Execucao:
     python3 mp-gradius-term.py
@@ -117,6 +119,94 @@ TITULO_ASC = [
     " ####   #   # #    # ####   ##   ####   ####  ",
 ]
 
+# =====================================================================
+#  IDIOMAS (pt / en) - todo texto exibido passa por Jogo.T()
+# =====================================================================
+
+IDIOMAS = ("pt", "en")
+
+STRINGS = {
+    "pt": {
+        "idioma_titulo": "IDIOMA / LANGUAGE",
+        "idioma_1":      "[1]  PORTUGUES  (PT-BR)",
+        "idioma_2":      "[2]  ENGLISH    (EN-US)",
+        "idioma_dica":   "Pressione 1 ou 2 para escolher   -   [Q] sair",
+        "idioma_ok":     "IDIOMA: PORTUGUES",
+        "subtitulo":     "M P - G R A D I U S - T E R M",
+        "op_jogar":      "JOGAR",
+        "op_sair":       "SAIR",
+        "high_score":    "HIGH SCORE: %07d",
+        "ajuda_1":       "SETAS / WASD ... mover (8 direcoes)      ESPACO ... ativar upgrade da barra",
+        "ajuda_2":       "Z ... tiro manual   F ... autofire   P ... pause   T ... idioma   Q ... sair",
+        "ajuda_3":       "Capture as capsulas ? e ative: MISSILE > DOUBLE > LASER > OPTION > SPEED",
+        "ajuda_4":       "4 naves jogaveis: VIC-01, FALCAO, MARTELO e ESPECTRO",
+        "comecar":       "ENTER para comecar",
+        "sel_titulo":    "E S C O L H A   S U A   N A V E",
+        "sel_dica":      "SETAS = escolher    ENTER = decolar    Q = voltar",
+        "stats":         "VEL %3d%%   VIDAS %d   CADENCIA %3d%%   LASER %d",
+        "traco_VIC-01":  "Sem bonus e sem penalidade: o arsenal classico do Gradius.",
+        "traco_FALCAO":  "+25% de velocidade e cadencia; perde 2 Speed ao ser atingida.",
+        "traco_MARTELO": "Nasce com MISSILE e explosao maior; LASER so na 2a volta da barra.",
+        "traco_ESPECTRO": "Options fixos acima/abaixo; LASER 3; DOUBLE vira tiro traseiro.",
+        "hud_vidas":     "VIDAS %-5s  FASE 1",
+        "hud_dica":      "%s | ESPACO=ativar  P=pause",
+        "msg_nave":      "NAVE: %s",
+        "msg_ativado":   "%s ATIVADO!",
+        "msg_atingida":  "NAVE ATINGIDA!",
+        "msg_chefe":     "O CHEFE ESTA ENFURECIDO!",
+        "msg_sem_upg":   "SEM UPGRADE DISPONIVEL",
+        "warning_sub":   "GRANDE NAVE INIMIGA SE APROXIMANDO",
+        "pausa":         "===  P A U S A  ===",
+        "pausa_dica":    "P para continuar - Q para o menu",
+        "score_final":   "SCORE FINAL: %07d",
+        "recorde":       "RECORDE: %07d",
+        "fim_dica":      "R - jogar de novo    N - trocar de nave    ENTER - menu",
+        "fase_ok":       "*** FASE 1 CONCLUIDA ***",
+        "vitoria":       "V I T O R I A !",
+        "pequeno":       "TERMINAL PEQUENO DEMAIS",
+        "pequeno_dica":  "Redimensione para pelo menos %dx%d (atual %dx%d)",
+        "tchau":         "Obrigado por jogar MP-GRADIUS-TERM!",
+    },
+    "en": {
+        "idioma_dica":   "Press 1 or 2 to choose   -   [Q] quit",
+        "idioma_ok":     "LANGUAGE: ENGLISH",
+        "op_jogar":      "PLAY",
+        "op_sair":       "QUIT",
+        "ajuda_1":       "ARROWS / WASD ... move (8 directions)      SPACE ... activate bar upgrade",
+        "ajuda_2":       "Z ... manual fire   F ... autofire   P ... pause   T ... language   Q ... quit",
+        "ajuda_3":       "Collect the ? capsules and activate: MISSILE > DOUBLE > LASER > OPTION > SPEED",
+        "ajuda_4":       "4 playable ships: VIC-01, FALCAO, MARTELO and ESPECTRO",
+        "comecar":       "ENTER to start",
+        "sel_titulo":    "C H O O S E   Y O U R   S H I P",
+        "sel_dica":      "ARROWS = choose    ENTER = launch    Q = back",
+        "stats":         "SPD %3d%%   LIVES %d   FIRE RATE %3d%%   LASER %d",
+        "traco_VIC-01":  "No bonus and no penalty: the classic Gradius arsenal.",
+        "traco_FALCAO":  "+25% speed and fire rate; loses 2 Speed when hit.",
+        "traco_MARTELO": "Starts with MISSILE and bigger blasts; LASER only on 2nd bar lap.",
+        "traco_ESPECTRO": "Fixed Options above/below; LASER 3; DOUBLE becomes a rear shot.",
+        "hud_vidas":     "LIVES %-5s  STAGE 1",
+        "hud_dica":      "%s | SPACE=activate  P=pause",
+        "msg_nave":      "SHIP: %s",
+        "msg_ativado":   "%s ACTIVATED!",
+        "msg_atingida":  "SHIP HIT!",
+        "msg_chefe":     "THE BOSS IS ENRAGED!",
+        "msg_sem_upg":   "NO UPGRADE AVAILABLE",
+        "warning_sub":   "HUGE ENEMY SHIP APPROACHING",
+        "pausa":         "===  P A U S E  ===",
+        "pausa_dica":    "P to resume - Q for the menu",
+        "score_final":   "FINAL SCORE: %07d",
+        "recorde":       "HIGH SCORE: %07d",
+        "fim_dica":      "R - play again    N - change ship    ENTER - menu",
+        "fase_ok":       "*** STAGE 1 CLEAR ***",
+        "vitoria":       "V I C T O R Y !",
+        "pequeno":       "TERMINAL TOO SMALL",
+        "pequeno_dica":  "Resize to at least %dx%d (current %dx%d)",
+        "tchau":         "Thanks for playing MP-GRADIUS-TERM!",
+    },
+}
+
+ULTIMO_IDIOMA = "pt"   # usado na mensagem de despedida, apos o curses encerrar
+
 # indices dos pares de cor (a inicializacao real acontece em iniciar_cores)
 C_BRANCO, C_CIANO, C_VERDE, C_AMARELO, C_VERMELHO, C_MAGENTA, C_AZUL, C_CINZA = range(1, 9)
 
@@ -124,8 +214,9 @@ C_BRANCO, C_CIANO, C_VERDE, C_AMARELO, C_VERMELHO, C_MAGENTA, C_AZUL, C_CINZA = 
 # =====================================================================
 #  NAVES JOGAVEIS
 #  Cada nave usa o MESMO sistema de upgrades, mas muda estatisticas-base
-#  e ganha um traco exclusivo. "glifos" = (cauda, cauda_speed3, corpo,
-#  corpo_double, nariz, nariz_laser) usados para montar o sprite.
+#  e ganha um traco exclusivo (texto em STRINGS["traco_<id>"]).
+#  "glifos" = (cauda, cauda_speed3, corpo, corpo_double, nariz, nariz_laser)
+#  usados para montar o sprite.
 # =====================================================================
 
 NAVES = [
@@ -133,7 +224,6 @@ NAVES = [
         "id": "VIC-01",
         "cor": C_VERDE,
         "lema": "Equilibrada: nenhum bonus, nenhuma penalidade. A referencia.",
-        "traco": "Sem bonus e sem penalidade: o arsenal classico do Gradius.",
         "vel": 1.00, "vidas": 3, "cd_vulcan": 1.00, "perda_speed": 1,
         "missile_inicial": False, "raio_x": RAIO_EXPLOSAO_X, "raio_y": RAIO_EXPLOSAO_Y,
         "dano_laser": DANO_LASER, "options_fixos": False, "tiro_traseiro": False,
@@ -144,7 +234,6 @@ NAVES = [
         "id": "FALCAO",
         "cor": C_CIANO,
         "lema": "Rapida e fragil: para quem confia no desvio.",
-        "traco": "+25% de velocidade e cadencia; perde 2 Speed ao ser atingida.",
         "vel": 1.25, "vidas": 2, "cd_vulcan": 0.75, "perda_speed": 2,
         "missile_inicial": False, "raio_x": RAIO_EXPLOSAO_X, "raio_y": RAIO_EXPLOSAO_Y,
         "dano_laser": DANO_LASER, "options_fixos": False, "tiro_traseiro": False,
@@ -155,7 +244,6 @@ NAVES = [
         "id": "MARTELO",
         "cor": C_VERMELHO,
         "lema": "Blindada e lenta: dominio de area pelo chao.",
-        "traco": "Nasce com MISSILE e explosao maior; LASER so na 2a volta da barra.",
         "vel": 0.80, "vidas": 4, "cd_vulcan": 1.00, "perda_speed": 1,
         "missile_inicial": True, "raio_x": 7, "raio_y": 3,
         "dano_laser": DANO_LASER, "options_fixos": False, "tiro_traseiro": False,
@@ -166,7 +254,6 @@ NAVES = [
         "id": "ESPECTRO",
         "cor": C_MAGENTA,
         "lema": "Posicionamento: muro de tiro vertical e laser reforcado.",
-        "traco": "Options fixos acima/abaixo; LASER 3; DOUBLE vira tiro traseiro.",
         "vel": 1.00, "vidas": 3, "cd_vulcan": 1.00, "perda_speed": 1,
         "missile_inicial": False, "raio_x": RAIO_EXPLOSAO_X, "raio_y": RAIO_EXPLOSAO_Y,
         "dano_laser": 3, "options_fixos": True, "tiro_traseiro": True,
@@ -185,10 +272,10 @@ def sprite_nave(cfg, missile=False, double=False, laser=False, speed=0):
     return c0 + c1 + c2
 
 
-def stats_nave(cfg):
-    """Linha curta de estatisticas para a tela de selecao."""
-    return (f"VEL {int(cfg['vel'] * 100):3d}%   VIDAS {cfg['vidas']}   "
-            f"CADENCIA {int(100 / cfg['cd_vulcan']):3d}%   LASER {cfg['dano_laser']}")
+def stats_nave(cfg, T):
+    """Linha curta de estatisticas para a tela de selecao (T = tradutor do jogo)."""
+    return T("stats", int(cfg["vel"] * 100), cfg["vidas"],
+             int(100 / cfg["cd_vulcan"]), cfg["dano_laser"])
 
 
 # =====================================================================
@@ -631,7 +718,7 @@ class Jogador(Entidade):
             if self.nivel_speed >= MAX_SPEED:
                 return False
             self.nivel_speed += 1
-        jogo.mensagem(f"{nome} ATIVADO!", 1.4)
+        jogo.mensagem(jogo.T("msg_ativado", nome), 1.4)
         return True
 
     # ---------------- aparencia ----------------
@@ -733,7 +820,7 @@ class Jogador(Entidade):
         self.x = 6
         self.y = jogo.topo + (jogo.base - jogo.topo) // 2
         self.invencivel = TEMPO_INVENCIVEL
-        jogo.mensagem("NAVE ATINGIDA!", 1.2)
+        jogo.mensagem(jogo.T("msg_atingida"), 1.2)
 
     def desenhar(self, tela, jogo):
         # pisca durante a invencibilidade
@@ -971,7 +1058,7 @@ class Chefe(Entidade):
             self.fase2 = True
             self.sprite = list(Chefe.SPRITE_F2)
             self.attr = cor(C_VERMELHO, True)
-            jogo.mensagem("O CHEFE ESTA ENFURECIDO!", 1.8)
+            jogo.mensagem(jogo.T("msg_chefe"), 1.8)
         if self.hp <= 0:
             self.hp = 0
             self.morrendo = 1.8
@@ -1076,7 +1163,7 @@ class HUD:
         # ---- linha superior ----
         esq = f" SCORE {j.score:07d}  HI {j.recorde:07d}  "
         vidas = GLIFO_VIDA * max(0, p.vidas) if p else ""
-        meio = f"VIDAS {vidas:<5}  FASE 1"
+        meio = j.T("hud_vidas", vidas)
         armas = []
         if p:
             if p.tem_missile:
@@ -1111,7 +1198,7 @@ class HUD:
             txt = f"[{nome}]"
             blit(tela, x, y, [txt], attr, topo=y, base=y)
             x += len(txt) + 1
-        dica = f"{j.nave['id']} | ESPACO=ativar  P=pause"
+        dica = j.T("hud_dica", j.nave["id"])
         if x + len(dica) + 2 < j.larg:
             blit(tela, j.larg - len(dica) - 1, y, [dica], cor(C_CINZA) | curses.A_DIM,
                  topo=y, base=y)
@@ -1168,12 +1255,13 @@ def montar_script():
 
 
 class Jogo:
-    """Controla estados (menu, jogo, pause, game over, vitoria) e o loop principal."""
+    """Controla estados (idioma, menu, jogo, pause, game over, vitoria) e o loop principal."""
 
     def __init__(self, tela):
         self.tela = tela
         self.rodando = True
-        self.estado = "MENU"
+        self.idioma = ULTIMO_IDIOMA
+        self.estado = "IDIOMA"
         self.menu_idx = 0
         self.recorde = carregar_recorde()
         self.autofire = True
@@ -1216,7 +1304,21 @@ class Jogo:
         self.fase_encerrada = False
         self.msg = ""
         self.msg_t = 0.0
-        self.mensagem(f"NAVE: {self.nave['id']}", 1.6)
+        self.mensagem(self.T("msg_nave", self.nave["id"]), 1.6)
+
+    # ---------------- idioma ----------------
+    def T(self, chave, *args):
+        """Texto traduzido; chaves ausentes no idioma atual caem no portugues."""
+        s = STRINGS[self.idioma].get(chave) or STRINGS["pt"].get(chave, chave)
+        return (s % args) if args else s
+
+    def definir_idioma(self, idioma):
+        global ULTIMO_IDIOMA
+        self.idioma = ULTIMO_IDIOMA = idioma
+
+    def alternar_idioma(self):
+        self.definir_idioma(IDIOMAS[(IDIOMAS.index(self.idioma) + 1) % len(IDIOMAS)])
+        self.mensagem(self.T("idioma_ok"), 1.4)
 
     def mensagem(self, texto, dur=1.5):
         self.msg = texto
@@ -1272,6 +1374,21 @@ class Jogo:
             self.starfield.repovoar()
             return
 
+        if self.estado == "IDIOMA":
+            if ch == ord('1'):
+                self.definir_idioma("pt")
+                self.estado = "MENU"
+            elif ch == ord('2'):
+                self.definir_idioma("en")
+                self.estado = "MENU"
+            elif ch in (ord('q'), ord('Q'), 27):
+                self.rodando = False
+            return
+
+        if ch in (ord('t'), ord('T')):          # troca de idioma em qualquer tela
+            self.alternar_idioma()
+            return
+
         if self.estado == "MENU":
             if ch in (curses.KEY_UP, ord('w'), ord('W'), curses.KEY_DOWN, ord('s'), ord('S')):
                 self.menu_idx = 1 - self.menu_idx
@@ -1310,7 +1427,7 @@ class Jogo:
                 self.jogador.pressionar("dir")
             elif ch == ord(' '):
                 if not self.power.ativar(self.jogador, self):
-                    self.mensagem("SEM UPGRADE DISPONIVEL", 0.8)
+                    self.mensagem(self.T("msg_sem_upg"), 0.8)
             elif ch in (ord('z'), ord('Z')):
                 self.jogador.atirar(self)          # disparo manual
             elif ch in (ord('f'), ord('F')):
@@ -1348,7 +1465,7 @@ class Jogo:
         if self.msg_t > 0:
             self.msg_t = max(0.0, self.msg_t - dt)
 
-        if self.estado in ("MENU", "SELECAO"):
+        if self.estado in ("IDIOMA", "MENU", "SELECAO"):
             self.starfield.atualizar(dt)
             self.chao.atualizar(dt)
             return
@@ -1499,15 +1616,17 @@ class Jogo:
         tela.erase()
         if self.larg < LARGURA_MIN or self.alt_tela < ALTURA_MIN:
             texto_centralizado(tela, max(0, self.alt_tela // 2 - 1),
-                               "TERMINAL PEQUENO DEMAIS", cor(C_VERMELHO, True))
+                               self.T("pequeno"), cor(C_VERMELHO, True))
             texto_centralizado(tela, max(1, self.alt_tela // 2),
-                               f"Redimensione para pelo menos {LARGURA_MIN}x{ALTURA_MIN} "
-                               f"(atual {self.larg}x{self.alt_tela})")
+                               self.T("pequeno_dica", LARGURA_MIN, ALTURA_MIN,
+                                      self.larg, self.alt_tela))
             tela.noutrefresh()
             curses.doupdate()
             return
 
-        if self.estado == "MENU":
+        if self.estado == "IDIOMA":
+            self.desenhar_idioma()
+        elif self.estado == "MENU":
             self.desenhar_menu()
         elif self.estado == "SELECAO":
             self.desenhar_selecao()
@@ -1544,12 +1663,13 @@ class Jogo:
         if self.warning_t > 0 and int(self.warning_t * 4) % 2 == 0:
             y = (self.topo + self.base) // 2
             texto_centralizado(tela, y - 1, "!!  W A R N I N G  !!", cor(C_VERMELHO, True))
-            texto_centralizado(tela, y + 1, "GRANDE NAVE INIMIGA SE APROXIMANDO",
+            texto_centralizado(tela, y + 1, self.T("warning_sub"),
                                cor(C_AMARELO, True))
         if self.msg_t > 0:
             texto_centralizado(tela, self.topo + 1, self.msg, cor(C_AMARELO, True))
 
-    def desenhar_menu(self):
+    def desenhar_titulo(self):
+        """Fundo + logo GRADIUS + subtitulo; devolve a proxima linha livre."""
         tela = self.tela
         self.starfield.desenhar(tela)
         self.chao.desenhar(tela)
@@ -1559,27 +1679,38 @@ class Jogo:
         x = max(0, (self.larg - larg_t) // 2)
         blit(tela, x, y, titulo, cor(C_CIANO, True))
         y += len(titulo) + 1
-        texto_centralizado(tela, y, "M P - G R A D I U S - T E R M", cor(C_MAGENTA, True))
-        y += 2
-        opcoes = ["JOGAR", "SAIR"]
+        texto_centralizado(tela, y, self.T("subtitulo"), cor(C_MAGENTA, True))
+        return y + 2
+
+    def desenhar_idioma(self):
+        """Tela inicial bilingue: mostra as opcoes e a dica nos dois idiomas."""
+        tela = self.tela
+        y = self.desenhar_titulo()
+        dica = cor(C_CINZA) | curses.A_DIM
+        texto_centralizado(tela, y, STRINGS["pt"]["idioma_titulo"], cor(C_CIANO, True))
+        texto_centralizado(tela, y + 2, STRINGS["pt"]["idioma_1"], cor(C_VERDE, True))
+        texto_centralizado(tela, y + 3, STRINGS["pt"]["idioma_2"], cor(C_VERDE, True))
+        texto_centralizado(tela, y + 5, STRINGS["pt"]["idioma_dica"], dica)
+        texto_centralizado(tela, y + 6, STRINGS["en"]["idioma_dica"], dica)
+
+    def desenhar_menu(self):
+        tela = self.tela
+        y = self.desenhar_titulo()
+        opcoes = [self.T("op_jogar"), self.T("op_sair")]
         for i, op in enumerate(opcoes):
             sel = (i == self.menu_idx)
             attr = curses.A_REVERSE | cor(C_AMARELO, True) if sel else cor(C_BRANCO, True)
             rotulo = f"  {op}  "
             escrever(tela, max(0, (self.larg - len(rotulo)) // 2), y + i, rotulo, attr)
         y += len(opcoes) + 2
-        texto_centralizado(tela, y, f"HIGH SCORE: {self.recorde:07d}", cor(C_VERDE, True))
+        texto_centralizado(tela, y, self.T("high_score", self.recorde), cor(C_VERDE, True))
         y += 2
-        for linha in [
-            "SETAS / WASD ... mover (8 direcoes)      ESPACO ... ativar upgrade da barra",
-            "Z ... tiro manual   F ... autofire       P ... pause    Q ... sair",
-            "Capture as capsulas ? e ative: MISSILE > DOUBLE > LASER > OPTION > SPEED",
-            "4 naves jogaveis: VIC-01, FALCAO, MARTELO e ESPECTRO",
-        ]:
+        for chave in ("ajuda_1", "ajuda_2", "ajuda_3", "ajuda_4"):
+            linha = self.T(chave)
             texto_centralizado(tela, y, linha, cor(C_CINZA) | curses.A_DIM)
             y += 1
         texto_centralizado(tela, min(self.alt_tela - 2, y + 1),
-                           "ENTER para comecar", cor(C_BRANCO, True))
+                           self.T("comecar"), cor(C_BRANCO, True))
 
     def desenhar_selecao(self):
         """Tela de escolha de nave: preview do sprite, estatisticas e traco exclusivo."""
@@ -1587,7 +1718,7 @@ class Jogo:
         self.starfield.desenhar(tela)
         self.chao.desenhar(tela)
         topo = max(1, (self.alt_tela - 4 * 3 - 6) // 2)
-        texto_centralizado(tela, topo, "E S C O L H A   S U A   N A V E", cor(C_CIANO, True))
+        texto_centralizado(tela, topo, self.T("sel_titulo"), cor(C_CIANO, True))
         y = topo + 2
         larg_bloco = min(self.larg - 4, 70)
         x0 = max(1, (self.larg - larg_bloco) // 2)
@@ -1595,40 +1726,40 @@ class Jogo:
             sel = (i == self.sel_nave)
             marcador = g("\u25b6", ">") if sel else " "
             preview = sprite_nave(cfg, missile=cfg["missile_inicial"])
-            cabecalho = f"{marcador} {cfg['id']:<9} {preview}   {stats_nave(cfg)}"
+            cabecalho = f"{marcador} {cfg['id']:<9} {preview}   {stats_nave(cfg, self.T)}"
             if sel:
                 escrever(tela, x0, y, cabecalho.ljust(larg_bloco)[:larg_bloco],
                          curses.A_REVERSE | cor(C_AMARELO, True))
             else:
                 escrever(tela, x0, y, cabecalho[:larg_bloco], cor(cfg["cor"], True))
             attr2 = cor(C_BRANCO, True) if sel else cor(C_CINZA) | curses.A_DIM
-            escrever(tela, x0 + 2, y + 1, cfg["traco"][:larg_bloco - 2], attr2)
+            escrever(tela, x0 + 2, y + 1, self.T("traco_" + cfg["id"])[:larg_bloco - 2], attr2)
             y += 3
         y = min(self.alt_tela - 2, y)
-        texto_centralizado(tela, y, "SETAS = escolher    ENTER = decolar    Q = voltar",
+        texto_centralizado(tela, y, self.T("sel_dica"),
                            cor(C_BRANCO, True))
 
     def desenhar_pause(self):
         y = (self.topo + self.base) // 2
-        texto_centralizado(self.tela, y, "===  P A U S A  ===", cor(C_AMARELO, True))
-        texto_centralizado(self.tela, y + 1, "P para continuar - Q para o menu",
+        texto_centralizado(self.tela, y, self.T("pausa"), cor(C_AMARELO, True))
+        texto_centralizado(self.tela, y + 1, self.T("pausa_dica"),
                            cor(C_BRANCO))
 
     def desenhar_gameover(self):
         y = (self.topo + self.base) // 2 - 2
         texto_centralizado(self.tela, y, "G A M E   O V E R", cor(C_VERMELHO, True))
-        texto_centralizado(self.tela, y + 2, f"SCORE FINAL: {self.score:07d}", cor(C_BRANCO, True))
-        texto_centralizado(self.tela, y + 3, f"RECORDE: {self.recorde:07d}", cor(C_VERDE, True))
-        texto_centralizado(self.tela, y + 5, "R - jogar de novo    N - trocar de nave    ENTER - menu",
+        texto_centralizado(self.tela, y + 2, self.T("score_final", self.score), cor(C_BRANCO, True))
+        texto_centralizado(self.tela, y + 3, self.T("recorde", self.recorde), cor(C_VERDE, True))
+        texto_centralizado(self.tela, y + 5, self.T("fim_dica"),
                            cor(C_AMARELO, True))
 
     def desenhar_vitoria(self):
         y = (self.topo + self.base) // 2 - 3
-        texto_centralizado(self.tela, y, "*** FASE 1 CONCLUIDA ***", cor(C_AMARELO, True))
-        texto_centralizado(self.tela, y + 2, "V I T O R I A !", cor(C_VERDE, True))
-        texto_centralizado(self.tela, y + 4, f"SCORE FINAL: {self.score:07d}", cor(C_BRANCO, True))
-        texto_centralizado(self.tela, y + 5, f"RECORDE: {self.recorde:07d}", cor(C_CIANO, True))
-        texto_centralizado(self.tela, y + 7, "R - jogar de novo    N - trocar de nave    ENTER - menu",
+        texto_centralizado(self.tela, y, self.T("fase_ok"), cor(C_AMARELO, True))
+        texto_centralizado(self.tela, y + 2, self.T("vitoria"), cor(C_VERDE, True))
+        texto_centralizado(self.tela, y + 4, self.T("score_final", self.score), cor(C_BRANCO, True))
+        texto_centralizado(self.tela, y + 5, self.T("recorde", self.recorde), cor(C_CIANO, True))
+        texto_centralizado(self.tela, y + 7, self.T("fim_dica"),
                            cor(C_AMARELO, True))
 
     # =================================================================
@@ -1673,4 +1804,4 @@ if __name__ == "__main__":
         curses.wrapper(main)
     except KeyboardInterrupt:
         pass
-    print("Obrigado por jogar MP-GRADIUS-TERM!")
+    print(STRINGS[ULTIMO_IDIOMA]["tchau"])

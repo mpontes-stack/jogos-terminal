@@ -20,7 +20,7 @@ Sem engine, sem sprites, sem dependências: só o seu terminal.
 
 | | Jogo | Inspirado em | Terminal mínimo | Idioma |
 |---|---|---|---|---|
-| 🚀 | [**MP Gradius Term**](#-mp-gradius-term) | *Gradius* (Konami, 1985) | 80 × 24 | PT |
+| 🚀 | [**MP Gradius Term**](#-mp-gradius-term) | *Gradius* (Konami, 1985) | 80 × 24 | PT / EN |
 | 🌙 | [**MP Lunar Lander**](#-mp-lunar-lander) | *Lunar Lander* (Atari, 1979) | 64 × 22 | PT / EN |
 | 💥 | [**MP Míssil Comando**](#-mp-míssil-comando) | *Missile Command* (Atari, 1980) | 62 × 20 | PT / EN |
 
@@ -59,6 +59,7 @@ python3 terminal-misslecomando/missel_comando.py     # Míssil Comando
 - Barra de upgrades `SPEED · MISSILE · DOUBLE · LASER · OPTION`
 - Chefe com ponto fraco e segunda fase de ataque
 - Recorde salvo em `~/.mp-gradius-term_hs.json`
+- Bilíngue: o idioma é escolhido na tela inicial e pode ser trocado a qualquer momento
 - Modo ASCII puro para terminais sem UTF-8: `MP_GRADIUS_ASCII=1 python3 mp-gradius-term.py`
 
 **Controles**
@@ -70,6 +71,7 @@ python3 terminal-misslecomando/missel_comando.py     # Míssil Comando
 | `F` | Liga/desliga o autofire |
 | `Espaço` | Ativa o upgrade selecionado na barra |
 | `P` | Pausa |
+| `T` | Troca o idioma (PT ↔ EN) |
 | `Q` / `Esc` | Volta ao menu |
 | `R` / `N` | *(fim de jogo)* reinicia / escolhe outra nave |
 
